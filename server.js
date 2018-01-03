@@ -12,12 +12,12 @@ mongoose.connect(uris);
 let app = express()
     .use(logger('dev'))
     .use(bodyParser.json())
-    .use(errorHandler());
 
 app.get('/accounts', accounts.get);
 app.post('/accounts', accounts.post);
 app.put('/accounts/:id', accounts.put);
 app.delete('/accounts/:id', accounts.delete);
 
+app.use(errorHandler());
 app.listen(3000);
 
