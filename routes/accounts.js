@@ -3,6 +3,15 @@ const Schemas = require('../mongoose/schemas');
 const get = (req, res, next) => {
     Schemas.Account.find((err, accounts) => {
         if (err) next(err);
+        console.log(req.connection.user);
+        console.log(req.connection.userSid);
+        let out='';
+        if (req.connection.userGroups) {
+            for (let i in req.connection.userGroups) {
+              out +=  req.connection.userGroups[i] + '\n'
+            }
+          }
+          console.log(out)
         res.status(200).send(accounts);
     });
 };
