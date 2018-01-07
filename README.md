@@ -16,6 +16,7 @@ start the server with <strong><i>npm start</i></strong> with default port of 300
  <p>"express": "4.16.2"</p>
  <p>"mongoose": "5.0.0-rc1"</p>
  <p>"morgan": "1.9.0"</p>
+ <p>"node-sspi": "0.2.2"</p>
 
  # Dev dependencies
  <p>"node-dev": "3.1.3"</p>
